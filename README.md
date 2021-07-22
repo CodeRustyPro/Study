@@ -18,4 +18,3 @@ Features :
 Disclaimer : 
 
 Stop reading disclaimer and go to the site [here](https://coderustypro.github.io/Study/)
-# Study
