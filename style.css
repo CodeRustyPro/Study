@@ -28,9 +28,9 @@ body{
 }
 #time{
     position: absolute;
-    bottom: -3%;
+    top: 60%;
     left: 50%;
-    width:auto;
+
     transform: translate(-50%,-50%);  
     background-color: rgba(255, 190, 11, 0.7); 
     opacity: 1;
@@ -40,7 +40,7 @@ body{
     justify-content: space-around;
     color: rgba(46, 46, 46, 0.582);
     font-family: 'Quicksand', sans-serif;
-
+    font-size: 2.1vw;
 }
 #lofibutton{
     background: transparent;
