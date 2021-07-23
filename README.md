@@ -1,4 +1,5 @@
-# Study📚
+# Lofi📚
+[Download here](https://github.com/CodeRustyPro/Study/releases/download/1.0/Lofi-win32-x64.rar)
 
 Study with complete focus and become productive.
 
