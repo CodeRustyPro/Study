@@ -1,5 +1,5 @@
 # Lofi📚
-[Download here](https://bit.ly/2Tv5Wa1)
+[Download thw desktop version](https://bit.ly/2Tv5Wa1)
 
 Study with complete focus and become productive.
 
