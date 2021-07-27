@@ -1,8 +1,9 @@
 # Lofi📚
 [Download the desktop version](https://bit.ly/2Tv5Wa1)
-🔴Study with complete focus and become productive.
 
->Features : 
+Study with complete focus and become productive.
+
+🔴Features : 
 
 >1.Listening to Chill-Lofi Beats.
 
