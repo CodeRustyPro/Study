@@ -1,5 +1,7 @@
 # Lofi📚
-[Download the desktop version](https://bit.ly/2Tv5Wa1)
+[Download the desktop version for windows](https://bit.ly/2Tv5Wa1)
+
+[Download the desktop version for Linux(Beta release)](https://github.com/CodeRustyPro/Study/releases/tag/1.0-Linux)
 
 Study with complete focus and become productive.
 
