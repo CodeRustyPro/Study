@@ -108,3 +108,8 @@ input {
     border: none;
     border-radius: 5px;
 }
+@media (min-width:320px)  { 
+    #time{
+        display:none;
+    }
+}
