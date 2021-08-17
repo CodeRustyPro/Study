@@ -17,7 +17,7 @@ Study with complete focus and become productive.
 
 >5.Easy to use😊
 
-![image](https://user-images.githubusercontent.com/65584840/127091001-e9214d6c-faaf-4a1e-a722-9e3da2c0a054.png)
+![image](https://user-images.githubusercontent.com/65584840/129733355-d1346400-a4aa-4a5b-ab68-a8a4c11b390f.png)
 
 Disclaimer : 
 
