@@ -41,7 +41,6 @@
         </button>
       </div>
       <h1 id="quote"></h1>
-      <h3 id="time">Time :</h3>
       <button
         onclick="openFullScreen()"
         id="fullscreen"
@@ -51,10 +50,7 @@
       </button>
       <div class="controlwrapper">
         <button id="pause" onclick="Pause()">
-          <img src="pause.png" alt="Pause" />
-        </button>
-        <button id="play" onclick="Play()">
-          <img src="play.png" alt="Play" />
+          <img src="play.png" alt="Pause" id="playpause"/>
         </button>
       </div>
     </div>
@@ -62,24 +58,24 @@
       var audio = new Audio("bg.mp3");
       audio.controls = true;
       audio.loop = true;
-      // function lofi() {
-      //   // var audio = new Audio("bg1.mp3");
-      //   audio.play();
-      //   audio.controls = true;
-      //   audio.loop = true;
-      //   var buttonLofi = document.getElementById("lofibutton");
-      //   buttonLofi.disabled = true;
-      //   buttonLofi.style.display = "none";
-      // }
+      var playimg = document.getElementById("playpause");
+      var audiostate = 0;
       function Pause() {
-        audio.pause();
+        // audio.pause();
+        if (audiostate==0) {
+          audio.play();
+          audiostate=1;
+          playimg.src="pause.png";
+        } else {
+          audio.pause();
+          audiostate=0;
+          playimg.src="play.png";
 
+        }
         var buttonLofi = document.getElementById("lofibutton");
         var pausebutton = document.getElementById("pause");
       }
-      function Play() {
-        audio.play();
-      }
+
       // function Pause(){
       //   var buttonLofi = document.getElementById("lofibutton");
       //   if (buttonLofi.style.display= "none"){
@@ -117,38 +113,7 @@
       ];
       document.getElementById("quote").innerHTML = getRandomSentence();
       console.log(getRandomSentence());
-      function getDateTime() {
-        var now = new Date();
-
-        var weekday = new Array(7);
-        weekday[0] = "Sunday";
-        weekday[1] = "Monday";
-        weekday[2] = "Tuesday";
-        weekday[3] = "Wednesday";
-        weekday[4] = "Thursday";
-        weekday[5] = "Friday";
-        weekday[6] = "Saturday";
-
-        var day = weekday[now.getDay()];
-        var hour = now.getHours();
-        var minute = now.getMinutes();
-        var second = now.getSeconds();
-
-        if (day.toString().length == 1) {
-          day = "0" + day;
-        }
-        if (hour.toString().length == 1) {
-          hour = "0" + hour;
-        }
-        if (minute.toString().length == 1) {
-          minute = "0" + minute;
-        }
-        if (second.toString().length == 1) {
-          second = "0" + second;
-        }
-        var dateTime = hour + ":" + minute + " " + day;
-        return dateTime;
-      }
+   
 
       // Google search
       function SearchGoogle() {
@@ -156,25 +121,17 @@
 
         window.open(`https://www.google.com/search?q=${query}`, "_blank");
       }
-      setInterval(function () {
-        currentTime = getDateTime();
-        document.getElementById("time").innerHTML = currentTime;
-      }, 1000);
+
       function openFullScreen() {
         if (!document.fullscreenElement) {
           document.documentElement.requestFullscreen();
           var buttonFullscreen = document.getElementById("fullscreenImg");
           var pausebutton = document.getElementById("pause");
-          var playbutton = document.getElementById("play");
-          playbutton.style.opacity = 0.6;
-          pausebutton.style.opacity = 0.6;
-          buttonFullscreen.style.opacity = 0.3;
+          buttonFullscreen.style.opacity = 0.4;
         } else {
           if (document.exitFullscreen) {
             var buttonFullscreen = document.getElementById("fullscreenImg");
             var pausebutton = document.getElementById("pause");
-            var playbutton = document.getElementById("play");
-            playbutton.style.opacity = 1;
             pausebutton.style.opacity = 1;
             buttonFullscreen.style.opacity = 1;
 

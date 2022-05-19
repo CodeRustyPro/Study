@@ -9,6 +9,7 @@ body{
     background-size: cover;
     width: 100%;
     height: 100%;
+    transition: 1s;
 }
 
 #quote{
@@ -26,29 +27,7 @@ body{
     font-family: 'Quicksand', sans-serif;
 
 }
-#time{
-    position: absolute;
-    top: 60%;
-    left: 50%;
 
-    transform: translate(-50%,-50%);  
-    background-color: rgba(255, 190, 11, 0.7); 
-    opacity: 1;
-    border-radius: 9px;
-    align-items: center;
-    text-align: center;
-    justify-content: space-around;
-    color: rgba(46, 46, 46, 0.582);
-    font-family: 'Quicksand', sans-serif;
-    font-size: 2.1vw;
-}
-#lofibutton{
-    background: transparent;
-    padding: 20px;
-    outline: none;
-    border: none;
-    border-radius: 3px;
-}
 img{
     width: 50px;
 }
@@ -70,10 +49,11 @@ img{
     border-radius: 5px;
     cursor: pointer;
     outline: none;
-    transition: 0.2s all;
+    transition: .2s ;
 }
 .controlwrapper button:active {
-    transform: scale(0.88);
+    transform: scale(0.1);
+    opacity: 0.1;
     
 }
 .controlwrapper{
