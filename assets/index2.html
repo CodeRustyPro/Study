@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Study and focus website to enhance your workflow."
+    />
+    <meta name="author" content="Dev Shah" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Lofi</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="body">
+    <div id="container">
+      <!-- <button onclick="lofi()" id="lofibutton">
+        <img src="HEADPHONES.png" alt="music" />
+      </button> -->
+      <div class="searchwrapper">
+        <input type="text" id="googleSearch" />
+        <button onclick="SearchGoogle()" class="searchButton" id="googlesearchbutton">
+          <svg
+            width="24"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+          >
+            <path
+              d="M15.853 16.56c-1.683 1.517-3.911 2.44-6.353 2.44-5.243 0-9.5-4.257-9.5-9.5s4.257-9.5 9.5-9.5 9.5 4.257 9.5 9.5c0 2.442-.923 4.67-2.44 6.353l7.44 7.44-.707.707-7.44-7.44zm-6.353-15.56c4.691 0 8.5 3.809 8.5 8.5s-3.809 8.5-8.5 8.5-8.5-3.809-8.5-8.5 3.809-8.5 8.5-8.5z"
+            />
+          </svg>
+        </button>
+      </div>
+      <h1 id="quote"></h1>
+      <button
+        onclick="openFullScreen()"
+        id="fullscreen"
+        aria-label="Full Screen"
+      >
+        <img src="/assets/full-screen1.png" alt="" id="fullscreenImg" />
+      </button>
+      <div class="controlwrapper">
+        <button id="pause" onclick="Pause()">
+          <img src="/assets/play.png" alt="Pause" id="playpause"/>
+        </button>
+      </div>
+    </div>
+    <script>
+      var audio = new Audio("/assets/bg.mp3");
+      audio.controls = true;
+      audio.loop = true;
+      var playimg = document.getElementById("playpause");
+      var audiostate = 0;
+      function Pause() {
+        // audio.pause();
+        if (audiostate==0) {
+          audio.play();
+          audiostate=1;
+          playimg.src="/assets/pause.png";
+        } else {
+          audio.pause();
+          audiostate=0;
+          playimg.src="/assets/play.png";
+
+        }
+        var buttonLofi = document.getElementById("lofibutton");
+        var pausebutton = document.getElementById("pause");
+      }
+
+      // function Pause(){
+      //   var buttonLofi = document.getElementById("lofibutton");
+      //   if (buttonLofi.style.display= "none"){
+
+      //   }
+      // }
+      function getRandomSentence() {
+        var index = Math.floor(Math.random() * sentences.length);
+        return sentences[index];
+      }
+
+      var sentences = [
+        "Focus on the journey, not the destination.",
+        "Comfort Zone ? Nah ! Lets take an extra step",
+        "One day, all your hard work will pay off.",
+        "It's worth the pain !",
+        "Do what is right, not what is easy.",
+        "We generate fears while we do nothing",
+        "If we wait until we’re ready, we’ll be waiting for the rest of our lives.",
+        "It’s never too late to be what you might have been.",
+        "You don’t have to be great to start. But you have to start to be great.",
+        "Work hard in silence. Let success make the noise",
+        "Well begun is half done",
+        "You will make everyone proud💫",
+        "Don’t wish it were easier. Wish you were better.",
+        "River cuts through rock not because of its power but because of its persistence.",
+        "To change your life, you must first change your day",
+        "Success is not final, failure is not fatal; it is the courage to continue that counts.",
+        "There’s no traffic after the extra mile.",
+        "Don’t stop until you’re proud.",
+        "You can win if you want. . .",
+        "Be the change you wish to see",
+        "Your dreams are precious💎",
+        "Dont let the temporary fun overtake your dreams",
+        "How do we forgive ourselves for all the things we did not become ?",
+        "If your dreams don’t scare you, they’re not big enough",
+        "You should never be motivated by the results of your actions, but actions themselves",
+        "Small Small Consitent Efforts",
+        "Take a deep breath and just do it"
+      ];
+      document.getElementById("quote").innerHTML = getRandomSentence();
+      console.log(getRandomSentence());
+   
+
+      // Google search
+      function SearchGoogle() {
+        var query = document.getElementById("googleSearch").value;
+
+        window.open(`https://www.google.com/search?q=${query}`, "_blank");
+      }
+
+      function openFullScreen() {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen();
+          var buttonFullscreen = document.getElementById("fullscreenImg");
+          var pausebutton = document.getElementById("pause");
+          buttonFullscreen.style.opacity = 0.4;
+        } else {
+          if (document.exitFullscreen) {
+            var buttonFullscreen = document.getElementById("fullscreenImg");
+            var pausebutton = document.getElementById("pause");
+            pausebutton.style.opacity = 1;
+            buttonFullscreen.style.opacity = 1;
+
+            document.exitFullscreen();
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
