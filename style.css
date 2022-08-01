@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url('/assets/LofiGirl2.gif');
+    background-image: url('LofiGirl2.gif');
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
