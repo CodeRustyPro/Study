@@ -58,7 +58,10 @@ var sentences = [
   "If your dreams don’t scare you, they’re not big enough",
   "You should never be motivated by the results of your actions, but actions themselves",
   "Small Small Consitent Efforts",
-  "Take a deep breath and just do it"
+  "Take a deep breath and just do it",
+  "My unmatched perspicacity, coupled with my sheer indefatigability makes me a feared opponent in any realm of human endeavour",
+  "Resist the slave mind",
+  "Settle for nothing less than the best"
 ];
 document.getElementById("quote").innerHTML = getRandomSentence();
 console.log(getRandomSentence());
